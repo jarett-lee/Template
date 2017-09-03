@@ -1,0 +1,19 @@
+#!/bin/bash
+pushd . &>/dev/null
+cd $(dirname $0)
+
+# parse arguments
+while (( "$#" )); do
+
+case "$1" in
+  --help|-h)
+    echo "options:"
+    exit 1
+    ;;
+esac
+
+shift
+done
+# done parsing arguments
+
+popd &>/dev/null
